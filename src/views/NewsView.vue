@@ -20,7 +20,7 @@ export default {
 // 보통 데이터요청할때에는 created라는 '라이프사이클 훅'을 사용
 created() {
   // console.log('호출 전: ',this);
-    this.$store.dispatch('FETCH_NEWS');
+  this.$store.dispatch('FETCH_NEWS');
     // [AS-IS]
     // 기본적으로 자바스크립트에서의 this 는 함수실행시 전역객체를 가리킴
     // 비동기호출할때에는 현재시점에서 새로 바깥 this가 생기기때문에
