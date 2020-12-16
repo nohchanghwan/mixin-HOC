@@ -12,6 +12,7 @@ export default {
     ToolBar,
   }
 }
+
 </script>
 
 <style>

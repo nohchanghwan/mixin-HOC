@@ -19,10 +19,13 @@ function fetchAskList() {
     return axios.get( config.baseUrl + 'jobs/1.json');
     // return axios.get(`${config.baseUrl}news/1.json'); 백틱을 이용한 방법
 }
-
+function fetchUserInfo(username){
+    return axios.get( config.baseUrl + 'user/' +username +'.json');
+}
 export { 
     fetchNewsList,
     fetchJobsList,
-    fetchAskList
+    fetchAskList,
+    fetchUserInfo
 }
 
