@@ -24,7 +24,7 @@ export default {
   computed: {
     // 기존 this.$store.state.ask 를 간단하게 만들고싶으면 mapState로 스테이트를 불러오기
     ...mapState({
-      mappingAsk: state => state.ask
+      mappingAsk: state => state.ask 
     })
 
     // 이렇게 스토어의 state를 컴포넌트에서 접근하는 방법이 여러가지가 있는데
