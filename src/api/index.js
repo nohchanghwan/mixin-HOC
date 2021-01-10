@@ -13,20 +13,25 @@ function fetchNewsList() {
 }
 function fetchJobsList() {
     // return axios.get( config.baseUrl + 'ask/1.json');
-    return axios.get(`${config.baseUrl}ask/1.json`); 
+    return axios.get(`${config.baseUrl}jobs/1.json`); 
 }
 function fetchAskList() {
     // return axios.get( config.baseUrl + 'jobs/1.json');
-    return axios.get(`${config.baseUrl}jobs/1.json`); 
+    return axios.get(`${config.baseUrl}ask/1.json`); 
 }
 function fetchUserInfo(username){
     // return axios.get( config.baseUrl + 'user/' +username +'.json');
     return axios.get( `${config.baseUrl}user/${username}.json`);
 }
+function fetchItemInfo(itemnum){
+    // return axios.get( config.baseUrl + 'user/' +username +'.json');
+    return axios.get( `${config.baseUrl}item/${itemnum}.json`);
+}
 export { 
     fetchNewsList,
     fetchJobsList,
     fetchAskList,
-    fetchUserInfo
+    fetchUserInfo,
+    fetchItemInfo
 }
 
