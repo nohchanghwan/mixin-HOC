@@ -17,6 +17,7 @@ export default {
     }
   },
   created(){
+    console.log("test");
     const userName = this.$route.params.id;
     this.$store.dispatch('FETCH_USER',userName );
   }
