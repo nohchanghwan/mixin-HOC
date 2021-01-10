@@ -1,12 +1,8 @@
 <template>
   <div>
     <section>
-			<user-profile :info="itemInfo">
-				<div slot="username"> {{ itemInfo.user }}</div>
-				<template slot="time"> {{ itemInfo.time_ago }}</template>
-			</user-profile>
       <!-- 사용자 상세정보 -->
-      <!-- <div class="user-container">
+      <div class="user-container">
         <div>
           <i class="fas fa-user"></i>
         </div>
@@ -18,7 +14,7 @@
             {{ itemInfo.time_ago }}
           </div>
         </div>
-      </div> -->
+      </div>
     </section>
 		<section>
       <h2>{{ itemInfo.title }}</h2>
@@ -33,12 +29,7 @@
 </template>
 
 <script>
-import UserProfile from "../components/UserProfile.vue";
-
 export default {
-	components: { 
-		UserProfile 
-	},
   computed: {
     itemInfo(){
         return this.$store.state.item;

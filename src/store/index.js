@@ -12,8 +12,8 @@ export const store = new Vuex.Store({
         news: [],
         jobs: [],
         ask: [],
-        user: [],
-        item: []
+        user: {},
+        item: {}
     },
     // mutations 모듈화 -> mutations.js
     mutations,

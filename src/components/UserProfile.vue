@@ -4,12 +4,12 @@
       <i class="fas fa-user"></i>
     </div>
     <div class="user-discription">
-      <div>
-        {{ info.id }}
-      </div>
+      <!-- slot을 이용한 프로필분기 -->
+      <slot name="username"></slot>
       <div class="time">
-        {{ info.created }}
+        <slot name="time"></slot>
       </div>
+      <slot name="karma"></slot>
     </div>
   </div>
 </template>
