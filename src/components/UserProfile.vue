@@ -4,7 +4,9 @@
       <i class="fas fa-user"></i>
     </div>
     <div class="user-discription">
-      <!-- slot을 이용한 프로필분기 -->
+      <!-- slot을 이용한 프로필분기 : 상위 컴포넌트에서 작성
+      ItemView -> info.user 였고
+      UserView -> info.id 여서 각각 다르기 때문에 슬롯사용 -->
       <slot name="username"></slot>
       <div class="time">
         <slot name="time"></slot>

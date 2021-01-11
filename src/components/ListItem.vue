@@ -1,7 +1,8 @@
 <template>
   <div>
     <ul class="news-list">
-      <li v-for="item in listItems" :key="item" class="post">
+      <!-- key값을 똑같이 item이라고 해도되지만 warning 발생하므로 다른 idx로 작성 -->
+      <li v-for="(item,idx) in listItems" :key="idx" class="post">
         <!-- 포인트 영역 -->
         <div class="points">
           {{ item.points || 0 }}
@@ -41,16 +42,16 @@
 export default {
   created() {
     //분기처리진행
-    const name = this.$route.name;
-    if(name === 'news') {
-      this.$store.dispatch('FETCH_NEWS');
-    } else if (name === 'ask'){
-      this.$store.dispatch('FETCH_ASK');
-    } else if (name === 'jobs'){
-      this.$store.dispatch('FETCH_JOBS');
-    } else {
-      return console.log("분기처리안됨")
-    }
+    // const name = this.$route.name;
+    // if(name === 'news') {
+    //   this.$store.dispatch('FETCH_NEWS');
+    // } else if (name === 'ask'){
+    //   this.$store.dispatch('FETCH_ASK');
+    // } else if (name === 'jobs'){
+    //   this.$store.dispatch('FETCH_JOBS');
+    // } else {
+    //   return console.log("분기처리안됨")
+    // }
   },
   computed: {
     listItems() {

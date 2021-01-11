@@ -2,31 +2,20 @@
   <div>
     <section>
 			<user-profile :info="itemInfo">
-				<div slot="username"> {{ itemInfo.user }}</div>
-				<template slot="time"> {{ itemInfo.time_ago }}</template>
+				<!-- <div slot="username"> {{ itemInfo.user }}</div> -->
+				<router-link slot="username" :to="'/user/' + itemInfo.user" >
+				{{ itemInfo.user }}
+				</router-link> 
+				<template slot="time"> {{ 'Posted ' + itemInfo.time_ago }}</template>
 			</user-profile>
-      <!-- 사용자 상세정보 -->
-      <!-- <div class="user-container">
-        <div>
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="user-discription">
-          <router-link :to="'/user/' + itemInfo.user" >
-            {{ itemInfo.user }}
-          </router-link> 
-          <div class="time">
-            {{ itemInfo.time_ago }}
-          </div>
-        </div>
-      </div> -->
     </section>
 		<section>
       <h2>{{ itemInfo.title }}</h2>
 		</section>
     <section>
       <!-- 질문 댓글 -->
+			<!-- 데이터바인딩은 데이터를 그대로 화면에 표현하지만 태그를적용해서 뿌려야할때는ㄴ v-html로 사용 -->
       <div v-html="itemInfo.content">
-        <!-- 데이터바인딩은 데이터를 그대로 화면에 표현하지만 태그를적용해서 뿌려야할때는ㄴ v-html로 사용 -->
       </div>
     </section>
   </div>
